@@ -12,11 +12,11 @@
       <input type="checkbox" id="switch" /><!--選單開關-->
       <ul class="menu">
         <!--選單內容-->
-        <li><a href="##">Home</a></li>
-        <li><a href="##">About</a></li>
-        <li><a href="##">Graphy</a></li>
-        <li><a href="##">Intro</a></li>
-        <li><a href="##">Contact</a></li>
+        <li><a href="##">首頁</a></li>
+        <li><a href="##">個人經歷</a></li>
+        <li><a href="##">學習紀錄</a></li>
+        <li><a href="##">作品集</a></li>
+        <li><a href="##">聯絡資訊</a></li>
       </ul>
     </nav>
   </div>
@@ -53,8 +53,8 @@ a {
 
 /* NavBar */
 nav {
-  background: rgb(194, 190, 190);
-  box-shadow: 0px 1px 3px #00000088;
+  background: rgba（0，0，0，0）;
+
   &::after {
     content: "";
     display: block;
@@ -97,10 +97,6 @@ label {
       padding: 10px 0;
       font-size: 18px;
       color: #5d5d5d;
-      &:hover {
-        background: #5d5d5d;
-        color: #fff;
-      }
     }
   }
 }
@@ -122,13 +118,15 @@ input:checked ~ .menu {
     float: right;
     clear: none;
     max-height: 50px;
-    background: rgb(194, 190, 190);
+    background: rgba（0，0，0，0）;
     li {
       display: inline-block;
       a {
-        font-size: 22px;
+        font-family: "fantasy";
+        font-weight: bold;
+        font-size: 20px;
         padding: 20 5px;
-        margin: 10px 25px 5px 5px;
+        margin: 10px 35px 5px 5px;
       }
     }
   }
