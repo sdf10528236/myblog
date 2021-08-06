@@ -1,13 +1,23 @@
 <template>
-  <headcard />
+  <div>
+    <banner />
+    <card />
+  </div>
 </template>
 
 <script>
-import headcard from '@/views/Home/Headcard'
+/* eslint-disable */
+
+import banner from "@/views/Home/Banner";
+import card from "@/components/Card";
 
 export default {
   components: {
-    headcard
-  }
-}
+    banner,
+    card,
+  },
+};
 </script>
+
+<style lang="scss" scoped>
+</style>

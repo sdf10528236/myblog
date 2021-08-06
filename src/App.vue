@@ -1,6 +1,7 @@
 <template>
-  <div id="app">
+  <div id="app" style="width: 100%; margin: auto">
     <navbar></navbar>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -14,5 +15,13 @@ Vue.component("navbar", navbar);
 export default {};
 </script>
 
-<style scoped>
+<style >
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html body {
+  height: 100%;
+  width: 100%;
+}
 </style>

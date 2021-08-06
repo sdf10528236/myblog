@@ -2,6 +2,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Learn from '../views/Learn.vue'
+import Project from '../views/Project.vue'
+import Experience from '../views/Experience.vue'
+import Contact from '../views/Contact.vue'
+
 
 Vue.use(VueRouter)
 
@@ -9,6 +14,26 @@ const routes = [
   {
     path: '/home',
     component: Home
+  },
+  {
+    path: '/learn',
+    component: Learn
+  },
+  {
+    path: '/project',
+    component: Project
+  },
+  {
+    path: '/experience',
+    component: Experience
+  },
+  {
+    path: '/contact',
+    component: Contact
+  },
+  {
+    path: '*',
+    redirect:'/home'
   },
   
 ]

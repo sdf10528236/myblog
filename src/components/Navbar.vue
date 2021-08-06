@@ -12,11 +12,21 @@
       <input type="checkbox" id="switch" /><!--選單開關-->
       <ul class="menu">
         <!--選單內容-->
-        <li><a href="##">首頁</a></li>
-        <li><a href="##">個人經歷</a></li>
-        <li><a href="##">學習紀錄</a></li>
-        <li><a href="##">作品集</a></li>
-        <li><a href="##">聯絡資訊</a></li>
+        <router-link to="/home" tag="li" active-class="myactive"
+          ><a>首頁</a></router-link
+        >
+        <router-link to="/experience" tag="li" active-class="myactive"
+          ><a>個人經歷</a></router-link
+        >
+        <router-link to="/learn" tag="li" active-class="myactive"
+          ><a>學習紀錄</a></router-link
+        >
+        <router-link to="/project" tag="li" active-class="myactive"
+          ><a>作品集</a></router-link
+        >
+        <router-link to="/contact" tag="li" active-class="myactive"
+          ><a>聯絡資訊</a></router-link
+        >
       </ul>
     </nav>
   </div>
