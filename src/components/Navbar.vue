@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav>
-      <h1>Navbar</h1>
+      <h1>Leeblog</h1>
       <label for="switch"
         ><div>
           <b-icon
@@ -62,10 +62,13 @@ nav {
   }
   h1 {
     /* Logo */
+    color: rgb(0, 0, 0);
     float: left;
+    font-size: 32px;
+    font-weight: bold;
     padding-top: 5px;
-    padding-left: 10px;
-    line-height: 70px;
+    padding-left: 15px;
+    line-height: 60px;
   }
 }
 /* 隱藏 checkbox */
@@ -88,7 +91,7 @@ label {
 /* 選單列 */
 .menu {
   clear: both;
-  background: #fff;
+  background: rgba（0，0，0，0）;
   li {
     text-align: center;
     border-bottom: 1px solid #efefef;
@@ -113,6 +116,7 @@ input:checked ~ .menu {
 @media screen and (min-width: 768px) {
   label {
     display: none;
+    background: rgba（0，0，0，0）;
   }
   .menu {
     float: right;
@@ -121,7 +125,9 @@ input:checked ~ .menu {
     background: rgba（0，0，0，0）;
     li {
       display: inline-block;
+
       a {
+        color: rgb(0, 0, 0);
         font-family: "fantasy";
         font-weight: bold;
         font-size: 20px;

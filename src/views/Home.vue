@@ -1,9 +1,13 @@
 <template>
-  <div>home</div>
+  <headcard />
 </template>
 
 <script>
-/* eslint-disable */
+import headcard from '@/views/Home/Headcard'
 
-export default {};
+export default {
+  components: {
+    headcard
+  }
+}
 </script>
