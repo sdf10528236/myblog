@@ -25,12 +25,14 @@ export default {
 <style lang="scss" scoped>
 .all {
   overflow: hidden;
+  width: 100%;
+  margin: 0px;
 }
 .container {
   text-align: center;
   width: 100%;
   padding: 10%;
-  margin: auto;
+  margin: 0px;
 
   // background-color: red;
   h1 {
@@ -59,6 +61,9 @@ export default {
 @media screen and (min-width: 768px) {
   .all {
     overflow: hidden;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
   }
   .container {
     text-align: center;

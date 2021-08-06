@@ -9,10 +9,11 @@
           <el-tag style="margin-bottom: 15px" size="mini" type="info">{{
             data.class
           }}</el-tag>
-          <h3 class="post-subtitle">
-            {{ data.detail }}
-          </h3>
-
+          <a>
+            <h3 class="post-subtitle">
+              {{ data.detail }}
+            </h3>
+          </a>
           <p class="post-meta">
             Publication Date:
             {{ data.time }}
@@ -39,34 +40,22 @@ export default {
           detail: "初嘗Vue.js...",
         },
         {
-          class: "Vue",
+          class: "Vue.js",
           title: "Vue 實戰",
           time: "2021/08/06",
           detail: "初嘗Vue...的經驗asdahrbjghare",
         },
         {
-          class: "Vue",
+          class: "Vue.js",
           title: "Vue 實戰",
           time: "2021/08/06",
           detail: "初嘗Vue...的經驗ajghare",
         },
         {
-          class: "Vue",
+          class: "Vue.js",
           title: "Vue 實戰",
           time: "2021/08/06",
           detail: "初嘗Vue...的經驗abjahrbjghare",
-        },
-        {
-          class: "Vue",
-          title: "Vue 實戰",
-          time: "2021/08/06",
-          detail: "初嘗Vue...的經驗asdbjghare",
-        },
-        {
-          class: "Vue",
-          title: "Vue 實戰",
-          time: "2021/08/06",
-          detail: "初嘗Vue...的經驗asdaknbjghare",
         },
       ],
     };
@@ -103,6 +92,7 @@ export default {
       text-decoration: none;
       color: #0085a1;
     }
+
     text-decoration: none;
     color: #212529;
     .post-title {
