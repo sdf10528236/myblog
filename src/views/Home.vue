@@ -46,8 +46,8 @@ export default {
 .block {
   text-align: center;
   width: 100%;
-  padding: 9%;
-  margin: 20px auto;
+  padding: 11%;
+  margin: 0px 0px;
   background-color: rgb(255, 204, 109);
 
   img {
