@@ -42,36 +42,31 @@ export default {
           class: "Vue",
           title: "Vue 實戰",
           time: "2021/08/06",
-          detail:
-            "初嘗Vue...的經驗asdaknfkjdfjgbekhjabrjhgbfajhkbrgjhdsgrbjahrbjghare",
+          detail: "初嘗Vue...的經驗asdahrbjghare",
         },
         {
           class: "Vue",
           title: "Vue 實戰",
           time: "2021/08/06",
-          detail:
-            "初嘗Vue...的經驗asdaknfkjdfjgbekhjabrjhgbfajhkbrgjhdsgrbjahrbjghare",
+          detail: "初嘗Vue...的經驗ajghare",
         },
         {
           class: "Vue",
           title: "Vue 實戰",
           time: "2021/08/06",
-          detail:
-            "初嘗Vue...的經驗asdaknfkjdfjgbekhjabrjhgbfajhkbrgjhdsgrbjahrbjghare",
+          detail: "初嘗Vue...的經驗abjahrbjghare",
         },
         {
           class: "Vue",
           title: "Vue 實戰",
           time: "2021/08/06",
-          detail:
-            "初嘗Vue...的經驗asdaknfkjdfjgbekhjabrjhgbfajhkbrgjhdsgrbjahrbjghare",
+          detail: "初嘗Vue...的經驗asdbjghare",
         },
         {
           class: "Vue",
           title: "Vue 實戰",
           time: "2021/08/06",
-          detail:
-            "初嘗Vue...的經驗asdaknfkjdfjgbekhjabrjhgbfajhkbrgjhdsgrbjahrbjghare",
+          detail: "初嘗Vue...的經驗asdaknbjghare",
         },
       ],
     };
@@ -95,9 +90,11 @@ export default {
 
 <style lang="scss" scoped>
 /* reset */
+
 .container {
   text-align: center;
   width: 90%;
+  overflow: hidden;
 }
 .post-preview {
   text-align: left;
