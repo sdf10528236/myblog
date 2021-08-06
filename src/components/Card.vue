@@ -1,10 +1,19 @@
 <template>
-  <div style="background-color: red; width: 100%">
-    <el-row>
-      <el-col :span="12"> <div class="grid-content bg-purple">11</div></el-col>
-      <el-col :span="12">
-        <div class="grid-content bg-purple-light">11</div></el-col
-      >
+  <div style="width: 100%" class="container">
+    <el-row :gutter="30">
+      <el-col :span="colume" v-for="data in datalist" :key="data.id">
+        <b-card
+          :header="data.cardclass"
+          header-tag="header"
+          :footer="data.time"
+          footer-tag="footer"
+          :title="data.title"
+          class="card"
+        >
+          <b-card-text>{{ data.detail }}</b-card-text>
+          <b-button href="#" variant="primary">更多....</b-button>
+        </b-card>
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -12,33 +21,80 @@
 <script>
 /* eslint-disable */
 
-export default {};
+export default {
+  data() {
+    return {
+      colume: 24,
+      datalist: [
+        {
+          cardclass: "Vue",
+          title: "Vue 實戰",
+          time: "2021/08/06",
+          detail:
+            "初嘗Vue...的經驗asdaknfkjdfjgbekhjabrjhgbfajhkbrgjhdsgrbjahrbjghare",
+        },
+        {
+          cardclass: "Vue",
+          title: "Vue 實戰",
+          time: "2021/08/06",
+          detail:
+            "初嘗Vue...的經驗asdaknfkjdfjgbekhjabrjhgbfajhkbrgjhdsgrbjahrbjghare",
+        },
+        {
+          cardclass: "Vue",
+          title: "Vue 實戰",
+          time: "2021/08/06",
+          detail:
+            "初嘗Vue...的經驗asdaknfkjdfjgbekhjabrjhgbfajhkbrgjhdsgrbjahrbjghare",
+        },
+        {
+          cardclass: "Vue",
+          title: "Vue 實戰",
+          time: "2021/08/06",
+          detail:
+            "初嘗Vue...的經驗asdaknfkjdfjgbekhjabrjhgbfajhkbrgjhdsgrbjahrbjghare",
+        },
+        {
+          cardclass: "Vue",
+          title: "Vue 實戰",
+          time: "2021/08/06",
+          detail:
+            "初嘗Vue...的經驗asdaknfkjdfjgbekhjabrjhgbfajhkbrgjhdsgrbjahrbjghare",
+        },
+        {
+          cardclass: "Vue",
+          title: "Vue 實戰",
+          time: "2021/08/06",
+          detail:
+            "初嘗Vue...的經驗asdaknfkjdfjgbekhjabrjhgbfajhkbrgjhdsgrbjahrbjghare",
+        },
+      ],
+    };
+  },
+  beforeMount() {
+    console.log(window.innerWidth);
+    if (window.innerWidth >= 1000) {
+      this.colume = 8;
+    } else if (window.innerWidth >= 760) {
+      this.colume = 12;
+    } else {
+      this.colume = 24;
+    }
+    console.log(this.colume);
+  },
+  mounted() {},
+};
 </script>
 
 
 
 <style lang="scss" scoped>
 /* reset */
-.text {
-  font-size: 14px;
+.container {
+  text-align: center;
 }
-
-.item {
-  margin-bottom: 18px;
-}
-
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: "";
-}
-.clearfix:after {
-  clear: both;
-}
-
-.box-card {
-  width: 480px;
-  display: inline-block;
-  margin: 20px;
+.card {
+  display: block;
+  margin: 20px 0px;
 }
 </style>
