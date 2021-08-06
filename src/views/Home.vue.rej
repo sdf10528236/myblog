@@ -1,0 +1,11 @@
+diff a/src/views/Home.vue b/src/views/Home.vue	(rejected hunks)
+@@ -6 +6 @@
+-import headcard from "@/views/Home/Headcard";
++import headcard from '@/views/Home/Headcard'
+@@ -10,3 +10,3 @@ export default {
+-    headcard,
+-  },
+-};
++    headcard
++  }
++}
