@@ -1,18 +1,24 @@
 <template>
   <div style="width: 100%" class="container">
-    <el-row :gutter="30">
-      <el-col :span="colume" v-for="data in datalist" :key="data.id">
-        <b-card
-          :header="data.cardclass"
-          header-tag="header"
-          :footer="data.time"
-          footer-tag="footer"
-          :title="data.title"
-          class="card"
-        >
-          <b-card-text>{{ data.detail }}</b-card-text>
-          <b-button href="#" variant="primary">更多....</b-button>
-        </b-card>
+    <el-row>
+      <el-col :span="24" v-for="data in datalist" :key="data.id">
+        <div class="post-preview">
+          <a href="post.html">
+            <h2 class="post-title">{{ data.title }}</h2>
+          </a>
+          <el-tag style="margin-bottom: 15px" size="mini" type="info">{{
+            data.class
+          }}</el-tag>
+          <h3 class="post-subtitle">
+            {{ data.detail }}
+          </h3>
+
+          <p class="post-meta">
+            Publication Date:
+            {{ data.time }}
+          </p>
+        </div>
+        <hr class="my-4" />
       </el-col>
     </el-row>
   </div>
@@ -27,42 +33,41 @@ export default {
       colume: 24,
       datalist: [
         {
-          cardclass: "Vue",
+          class: "Vue.js",
+          title: "Vue 實戰",
+          time: "2021/08/06",
+          detail: "初嘗Vue.js...",
+        },
+        {
+          class: "Vue",
           title: "Vue 實戰",
           time: "2021/08/06",
           detail:
             "初嘗Vue...的經驗asdaknfkjdfjgbekhjabrjhgbfajhkbrgjhdsgrbjahrbjghare",
         },
         {
-          cardclass: "Vue",
+          class: "Vue",
           title: "Vue 實戰",
           time: "2021/08/06",
           detail:
             "初嘗Vue...的經驗asdaknfkjdfjgbekhjabrjhgbfajhkbrgjhdsgrbjahrbjghare",
         },
         {
-          cardclass: "Vue",
+          class: "Vue",
           title: "Vue 實戰",
           time: "2021/08/06",
           detail:
             "初嘗Vue...的經驗asdaknfkjdfjgbekhjabrjhgbfajhkbrgjhdsgrbjahrbjghare",
         },
         {
-          cardclass: "Vue",
+          class: "Vue",
           title: "Vue 實戰",
           time: "2021/08/06",
           detail:
             "初嘗Vue...的經驗asdaknfkjdfjgbekhjabrjhgbfajhkbrgjhdsgrbjahrbjghare",
         },
         {
-          cardclass: "Vue",
-          title: "Vue 實戰",
-          time: "2021/08/06",
-          detail:
-            "初嘗Vue...的經驗asdaknfkjdfjgbekhjabrjhgbfajhkbrgjhdsgrbjahrbjghare",
-        },
-        {
-          cardclass: "Vue",
+          class: "Vue",
           title: "Vue 實戰",
           time: "2021/08/06",
           detail:
@@ -92,9 +97,48 @@ export default {
 /* reset */
 .container {
   text-align: center;
+  width: 90%;
 }
-.card {
-  display: block;
-  margin: 20px 0px;
+.post-preview {
+  text-align: left;
+  a {
+    :hover {
+      text-decoration: none;
+      color: #0085a1;
+    }
+    text-decoration: none;
+    color: #212529;
+    .post-title {
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 1.875rem;
+      margin-top: 1.875rem;
+      margin-bottom: 0.625rem;
+    }
+    .post-subtitle {
+      font-weight: 300;
+      margin-bottom: 0.625rem;
+    }
+    .post-meta {
+      font-size: 1.125rem;
+      font-style: italic;
+      margin-top: 0;
+      color: #6c757d;
+    }
+  }
+  .my-4 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 650px;
+  }
 }
 </style>
