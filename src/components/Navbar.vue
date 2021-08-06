@@ -13,19 +13,19 @@
       <ul class="menu">
         <!--選單內容-->
         <router-link to="/home" tag="li" active-class="myactive"
-          ><a>首頁</a></router-link
+          >首頁</router-link
         >
         <router-link to="/experience" tag="li" active-class="myactive"
-          ><a>個人經歷</a></router-link
+          >個人經歷</router-link
         >
         <router-link to="/learn" tag="li" active-class="myactive"
-          ><a>學習紀錄</a></router-link
+          >學習紀錄</router-link
         >
         <router-link to="/project" tag="li" active-class="myactive"
-          ><a>作品集</a></router-link
+          >作品集</router-link
         >
         <router-link to="/contact" tag="li" active-class="myactive"
-          ><a>聯絡資訊</a></router-link
+          >聯絡資訊</router-link
         >
       </ul>
     </nav>
@@ -55,10 +55,6 @@ ul {
 ul {
   list-style: none;
   padding-left: 0;
-}
-
-a {
-  text-decoration: none;
 }
 
 /* NavBar */
@@ -104,12 +100,13 @@ label {
   background: rgba（0，0，0，0）;
   li {
     text-align: center;
-    border-bottom: 1px solid #efefef;
-    a {
-      display: block;
-      padding: 10px 0;
-      font-size: 18px;
-      color: #5d5d5d;
+
+    display: block;
+    padding: 10px 0;
+    font-size: 18px;
+    color: #5d5d5d;
+    .myactive {
+      color: orange;
     }
   }
 }
@@ -133,17 +130,18 @@ input:checked ~ .menu {
     clear: none;
     max-height: 50px;
     background: rgba（0，0，0，0）;
+    .myactive {
+      color: #f5a512;
+      opacity: 0.8;
+    }
     li {
       display: inline-block;
-
-      a {
-        color: rgb(0, 0, 0);
-        font-family: "fantasy";
-        font-weight: bold;
-        font-size: 20px;
-        padding: 20 5px;
-        margin: 10px 35px 5px 5px;
-      }
+      color: rgb(0, 0, 0);
+      font-family: "fantasy";
+      font-weight: bold;
+      font-size: 20px;
+      padding: 20 5px;
+      margin: 10px 35px 5px 5px;
     }
   }
 }

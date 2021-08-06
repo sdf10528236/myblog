@@ -2,7 +2,8 @@
   <div id="app" style="width: 100%; margin: auto">
     <navbar></navbar>
     <router-view></router-view>
-    <appfooter></appfooter>
+
+    <appfooter class="footer"></appfooter>
   </div>
 </template>
 
@@ -26,5 +27,8 @@ export default {};
 html body {
   height: 100%;
   width: 100%;
+}
+
+.footer {
 }
 </style>
