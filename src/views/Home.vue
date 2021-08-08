@@ -1,10 +1,12 @@
 <template>
   <div>
     <banner v-show="isbannershow" style="width100%" />
-    <div class="block" v-show="isheadshow">
-      <img src="../assets/self.jpg" />
-      <h3>Gheng-Ying Lee</h3>
-    </div>
+    <transition name="fade">
+      <div class="block" v-show="isheadshow">
+        <img src="../assets/self.jpg" />
+        <h3>Gheng-Ying Lee</h3>
+      </div>
+    </transition>
     <card />
     <div class="bottom">
       <el-button type="info" plain>看更多....</el-button>
@@ -30,7 +32,7 @@ export default {
     card,
   },
   mounted() {
-    setTimeout(this.showhead, 2000);
+    setTimeout(this.showhead, 1500);
   },
   methods: {
     showhead() {
@@ -43,6 +45,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 2s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 .block {
   text-align: center;
   width: 100%;
@@ -66,7 +75,7 @@ export default {
 }
 @media screen and (max-width: 768px) {
   .block {
-    padding: 62px;
+    padding: 8%;
     h3 {
       font-size: 26px;
     }
@@ -79,7 +88,7 @@ export default {
 }
 @media screen and (max-width: 320px) {
   .block {
-    padding: 62px;
+    padding: 8%;
     h3 {
       font-size: 16px;
     }

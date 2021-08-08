@@ -6,6 +6,7 @@ import Learn from '../views/Learn.vue'
 import Project from '../views/Project.vue'
 import Experience from '../views/Experience.vue'
 import Contact from '../views/Contact.vue'
+import Resource from '../views/Resource.vue'
 
 
 Vue.use(VueRouter)
@@ -18,6 +19,10 @@ const routes = [
   {
     path: '/learn',
     component: Learn
+  },
+  {
+    path: '/resource',
+    component: Resource
   },
   {
     path: '/project',

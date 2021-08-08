@@ -18,9 +18,22 @@
         <router-link to="/experience" tag="li" active-class="myactive"
           >個人經歷</router-link
         >
-        <router-link to="/learn" tag="li" active-class="myactive"
-          >學習紀錄</router-link
-        >
+        <el-dropdown trigger="click">
+          <li class="el-dropdown-link">學習紀錄</li>
+
+          <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item
+              ><router-link to="/learn" tag="li"
+                >學習紀錄</router-link
+              ></el-dropdown-item
+            >
+            <el-dropdown-item>
+              <router-link to="/resource" tag="li" active-class="myactive"
+                >學習資源</router-link
+              ></el-dropdown-item
+            >
+          </el-dropdown-menu>
+        </el-dropdown>
         <router-link to="/project" tag="li" active-class="myactive"
           >作品集</router-link
         >
@@ -77,6 +90,9 @@ nav {
     line-height: 60px;
   }
 }
+.el-dropdown-link {
+  cursor: pointer;
+}
 /* 隱藏 checkbox */
 input {
   display: none;
@@ -97,6 +113,7 @@ label {
 /* 選單列 */
 .menu {
   clear: both;
+  text-align: center;
   background: rgba（0，0，0，0）;
   li {
     text-align: center;
@@ -144,5 +161,8 @@ input:checked ~ .menu {
       margin: 10px 35px 5px 5px;
     }
   }
+}
+.el-dropdown-link {
+  cursor: pointer;
 }
 </style>
