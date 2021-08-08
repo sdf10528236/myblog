@@ -22,14 +22,20 @@
           <li class="el-dropdown-link">學習紀錄</li>
 
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item
-              ><router-link to="/learn" tag="li"
-                >學習紀錄</router-link
+            <el-dropdown-item>
+              <router-link to="/article" tag="li" active-class="myactive"
+                >文章分享</router-link
               ></el-dropdown-item
             >
+
             <el-dropdown-item>
               <router-link to="/resource" tag="li" active-class="myactive"
                 >學習資源</router-link
+              ></el-dropdown-item
+            >
+            <el-dropdown-item
+              ><router-link to="/learn" tag="li" active-class="myactive"
+                >學習歷程</router-link
               ></el-dropdown-item
             >
           </el-dropdown-menu>

@@ -7,6 +7,7 @@ import Project from '../views/Project.vue'
 import Experience from '../views/Experience.vue'
 import Contact from '../views/Contact.vue'
 import Resource from '../views/Resource.vue'
+import Article from '../views/Article.vue'
 
 
 Vue.use(VueRouter)
@@ -23,6 +24,10 @@ const routes = [
   {
     path: '/resource',
     component: Resource
+  },
+  {
+    path: '/article',
+    component: Article
   },
   {
     path: '/project',
